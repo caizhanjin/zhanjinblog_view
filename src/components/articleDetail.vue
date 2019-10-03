@@ -428,7 +428,7 @@ export default {
 	text-decoration: underline;
 }
 
-.detail_editor  .v-note-panel{
+.detail_editor  .v-note-panel, .v-note-wrapper{
 	border:none !important;
 }
 

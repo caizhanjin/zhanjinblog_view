@@ -7,10 +7,13 @@
 				:rules="{ required:true, message:'文章正文不能为空', trigger: 'blur' }">
 				<mavon-editor 
 					v-model="articleDetail.body" 
-					style="height:700px;" 
 					id="create_editor"
 					@fullScreen="fullScreen"
 					:toolbars="toolbars"
+					ref=md
+					@imgAdd="$imgAdd"
+					:tabSize="4"
+					:boxShadowStyle="'0 2px 8px 0 rgba(0, 0, 0, 0.1)'"
 				/>
 			</el-form-item>
 			<el-form-item label="标签" 
@@ -125,6 +128,7 @@ export default {
 			this.getArticleDetail()
 			this.is_edit = true
 		}
+		document.getElementsByClassName('markdown-body')[0].style.height = "700px"
 	},
 	methods:{
 		$imgAdd(pos, $file){
@@ -152,9 +156,9 @@ export default {
 		},
 		fullScreen(status, value){
 			if(status==true){
-				document.getElementById("create_editor").style.height = "100%"
+				document.getElementsByClassName('markdown-body')[0].style.height = "100%"
 			}else{
-				document.getElementById("create_editor").style.height = "700px"
+				document.getElementsByClassName('markdown-body')[0].style.height = "700px"
 			}
 		},
 		getArticleDetail(){

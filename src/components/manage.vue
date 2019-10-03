@@ -51,7 +51,7 @@ export default {
 }
 
 .manage_collapse .el-collapse-item__header{
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 
