@@ -53,7 +53,7 @@
 			<div class="power_by">
 				Powered by 
 				<a href="https://www.django-rest-framework.org/" target="_blank">Django REST Framework</a> & 
-				<a href="https://element.eleme.io/#/zh-CN" target="_blank">Element</a> 
+				<a href="https://cn.vuejs.org" target="_blank">vue.js</a> 
 			</div>
 		</el-footer>
 	</el-container>
