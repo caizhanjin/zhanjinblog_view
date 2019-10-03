@@ -125,19 +125,16 @@
 		</div>
 	</el-col>
 	<el-col :span="4" class="detail_right">
-		<el-card shadow="hover" class="detail_card article_detail_float" v-if="content_data.length!=0">
 			目录：
-			<p >
-				<div v-for="(item, key) in content_data" :key="key" class="detail_content_list">
-					<a :href="'#'+item.point_id" v-if="item.level==1">{{ item.point_title }}</a>
-					<a :href="'#'+item.point_id" v-else style="margin-left:15px;">{{ item.point_title }}</a>
-				</div>
-			</p>
-		</el-card>
-		<el-card shadow="hover" class="detail_card" v-else>
-			目录：
-			<p style="text-align:center;font-style: italic;color: #909399;">文章暂无目录</p>
-		</el-card>
+			<div v-if="content_data.length!=0">
+				<p  >
+					<div v-for="(item, key) in content_data" :key="key" class="detail_content_list">
+						<a :href="'#'+item.point_id" v-if="item.level==1">{{ item.point_title }}</a>
+						<a :href="'#'+item.point_id" v-else style="margin-left:15px;">{{ item.point_title }}</a>
+					</div>
+				</p>
+			</div>
+			<div v-else><p style="text-align:center;font-style: italic;color: #909399;">文章暂无目录</p></div>
 	</el-col>
 </el-row>
 </div>
@@ -373,9 +370,9 @@ export default {
 	padding:15px;
 }
 
-.detail_card{
+/* .detail_card{
 	margin-top:10px;
-}
+} */
 
 .text_muted {
     color: #6c757d;
@@ -555,12 +552,31 @@ export default {
 	padding-left: 10px;
 }
 
-.article_detail_float{
-	width: 14%;
-	position: fixed;
-	right: 1.8%;
-	top: 10%;
-	max-height: 70%;
-	overflow: auto;
+.detail_main{
+	max-height:calc(100vh);
+	overflow:auto;
+}
+
+.detail_main::-webkit-scrollbar {
+	display: none;
+}
+
+.detail_left{
+	max-height:calc(100vh);
+	overflow:auto;
+}
+
+.detail_left::-webkit-scrollbar {
+	display: none;
+}
+
+.detail_right{
+	padding: 20px;
+	max-height:calc(100vh);
+	overflow:auto;
+}
+
+.detail_right::-webkit-scrollbar {
+	display: none;
 }
 </style>
