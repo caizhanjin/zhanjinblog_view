@@ -16,7 +16,7 @@ if (process.env.NODE_ENV == 'development') {
 } else if (process.env.NODE_ENV == 'debug') {    
     axios.defaults.baseURL = 'http://150.109.55.104:8000';
 } else if (process.env.NODE_ENV == 'production') {    
-    axios.defaults.baseURL = '';
+    axios.defaults.baseURL = 'http://150.109.55.104:8000';
 }
 
 // 请求拦截
