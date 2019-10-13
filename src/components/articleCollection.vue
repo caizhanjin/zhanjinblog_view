@@ -10,6 +10,7 @@
                 <span><i class="el-icon-files" style="color:#FF6767;"></i>{{ item.article_count }}</span>
             </div>
         </el-card>
+        <div v-if="list_collection.length==0" class="article_list_none">暂无文集</div>
     </el-col>
     <el-col :span="6" class="">
         <recentView></recentView>

@@ -11,9 +11,10 @@ axios.defaults.timeout = 10000; // 请求超时时间
 // 环境的切换
 axios.defaults.baseURL = '';
 if (process.env.NODE_ENV == 'development') {
-    axios.defaults.baseURL = 'http://127.0.0.1:8000';
+    // axios.defaults.baseURL = 'http://127.0.0.1:8000';
+    axios.defaults.baseURL = 'http://150.109.55.104:8000';
 } else if (process.env.NODE_ENV == 'debug') {    
-    axios.defaults.baseURL = '';
+    axios.defaults.baseURL = 'http://150.109.55.104:8000';
 } else if (process.env.NODE_ENV == 'production') {    
     axios.defaults.baseURL = '';
 }
