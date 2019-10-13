@@ -30,7 +30,7 @@ export default {
             is_login:false,
             is_edit:false,
 
-            recent_info:'',
+            recent_info:'博主暂无动态~',
             new_recent_info:'',
             create_time:'',
 		}
@@ -46,7 +46,7 @@ export default {
  			this.$get('/articles/RecentModelViewSet/get_recent_data/')
 			.then((res) => {
 				if(res.code==200){
-                    this.recent_info = res.data.recent_info
+                    this.recent_info = res.data.recent_info?res.data.recent_info:'博主暂无动态~'
                     this.create_time = res.data.create_time
 				}else{
 					this.$message({message: res.msg, type: 'error', showClose: true})

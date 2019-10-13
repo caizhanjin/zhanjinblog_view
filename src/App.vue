@@ -212,7 +212,7 @@ html,body,#app{
 
 .list_user{
 	float: right;
-	margin-right: 10px;
+	margin-right: 10px !important;
 }
 
 .list_user ul:hover{
