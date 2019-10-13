@@ -403,21 +403,21 @@ export default {
 }
 
 .detail_button .right{
-	float:right;
+	float:right !important;
 }
 
 .detail_content_card{
 	margin-top:15px;
 	margin-bottom:15px;
-	background-color: #e2e3e5;
-	border-color: #d6d8db;
-	color: #6c757d;
+	background-color: #e2e3e5  !important;
+	border-color: #d6d8db  !important;
+	color: #6c757d  !important;
     font-size: 14px;
     line-height: 20px;
 }
 
 .detail_content_card a{
-	color: #6c757d;
+	color: #6c757d !important;
 	text-decoration: none;
 }
 

@@ -161,7 +161,7 @@ html,body,#app{
 
 .app_header{
 	height:61px !important;
-	padding:0;
+	padding:0 !important;
 	border-bottom: 1px solid #dcdfe6;
 }
 
@@ -245,7 +245,7 @@ html,body,#app{
 	background-color: #606266;
 	text-align: center;
 	height:70px !important;
-	padding:20px;
+	padding:20px !important;
     font-size: 16px;
     color: #666;
 }
@@ -265,7 +265,7 @@ html,body,#app{
 }
 
 .app_main{
-	padding: 0px; 
+	padding: 0px !important; 
 }
   
 #app {
