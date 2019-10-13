@@ -12,7 +12,7 @@
         </el-card>
         <div v-if="list_collection.length==0" class="article_list_none">暂无文集</div>
     </el-col>
-    <el-col :span="6" class="">
+    <el-col :span="6">
         <recentView></recentView>
         <el-card shadow="hover" class="collection_label">
           <i class="el-icon-notebook-1" style="color:#f0c674;padding-right:5px;"></i>标签

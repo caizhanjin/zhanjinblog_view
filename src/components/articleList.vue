@@ -306,13 +306,6 @@ export default {
   font-style: italic;
 }
 
-.article_list_none{
-  text-align: center;
-  margin: 10px 0 20px 0;
-  font-style: italic;
-  color: #909399;
-}
-
 .article_list_collection{
     margin-top: 20px;
 }
